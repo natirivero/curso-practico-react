@@ -1,4 +1,3 @@
-import { createConfigItemSync } from '@babel/core';
 import { useState } from 'react';
 
 const initialState = {
