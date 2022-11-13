@@ -1,3 +1,4 @@
+import { createConfigItemSync } from '@babel/core';
 import { useState } from 'react';
 
 const initialState = {
@@ -14,9 +15,17 @@ const useInitialState = () => {
     });
   };
 
+  const removeFromCart = (payload) => {
+    setState({
+      ...state,
+      cart: state.cart.filter((items) => items.id !== payload.id),
+    });
+  };
+
   return {
     state,
     addToCart,
+    removeFromCart,
   };
 };
 
