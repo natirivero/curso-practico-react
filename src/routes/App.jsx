@@ -15,12 +15,16 @@ import AppContext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
 import '@styles/global.scss';
 
+/**
+ * Deploy a github pages
+ * https://platzi.com/tutoriales/2484-react-practico/12068-desplegar-una-app-de-react-junto-con-otros-projectos-en-github-pages/
+ */
 const App = () => {
   const initialState =
     useInitialState(); /* Funcion que retorna state y addToCart */
   return (
     <AppContext.Provider value={initialState}>
-      <BrowserRouter>
+      <BrowserRouter basename="/react-shop">
         <Layout>
           <Routes>
             <Route exact path="/" element={<Home />} />
