@@ -24,7 +24,7 @@ const App = () => {
     useInitialState(); /* Funcion que retorna state y addToCart */
   return (
     <AppContext.Provider value={initialState}>
-      <BrowserRouter basename="/curso-practico-react/">
+      <BrowserRouter basename="curso-practico-react/">
         <Layout>
           <Routes>
             <Route exact path="/" element={<Home />} />
